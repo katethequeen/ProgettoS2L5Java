@@ -1,7 +1,7 @@
 package it.epicode.catalogo;
 
 import it.epicode.catalogo.exceptions.CodiceISBN.CodiceISBNException;
-import jdk.incubator.vector.VectorOperators;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -75,9 +75,9 @@ public class Archivio {
                 .average()
                 .orElse(0);
 
-        System.out.printf("Numro totale dei libri: ", numeroLibri);
-        System.out.printf("Numro totale delle riviste: ", numeroRiviste);
-        elementoConPiuPagine.ifPresent(e -> System.out.println("Elemento cn piu pagine: " + e));
-        System.out.printf("Media di tutte le pagine degli elementi: ", mediaPagine);
+        System.out.printf("Numero totale dei libri: %d%n", numeroLibri);
+        System.out.printf("Numero totale delle riviste: %d%n ", numeroRiviste);
+        elementoConPiuPagine.ifPresent(e -> System.out.println("Elemento con piu pagine: " + e));
+        System.out.printf("Media di tutte le pagine degli elementi: %f%n", mediaPagine);
     }
 }
